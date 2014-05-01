@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>
+      Gender Pay Gap for New York City Employees
+    </title>
+	
+  
+  <script type="text/javascript" src="//www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Create and populate the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Department', 'Women\'s Average Salary as a Percentage of Men\'s', { role: 'style' }, { role: 'annotation' } ],
+                ['Total',  .9, 'color: #08b2c9', '90%' ],
+                ['Fire',  .72, 'color: #a2c4c9', '72%' ],
+                ['Police',  .74, 'color: #a2c4c9', '74%' ],
+                ['Sanitation',  .81, 'color: #a2c4c9', '81%' ],
+                ['Finance',  .82, 'color: #a2c4c9', '82%' ],
+                ['Design & Construction',  .86, 'color: #a2c4c9', '86%' ],
+                ['Housing Preservation & Development',  .87, 'color: #a2c4c9', '87%' ],
+                ['Social Services',  .89, 'color: #a2c4c9', '89%' ],
+                ['Environmental Protection',  .9, 'color: #a2c4c9', '90%' ],
+                ['District Attorney',  .9, 'color: #a2c4c9', '90%' ],
+                ['Housing Authority',  .9, 'color: #a2c4c9', '90%'],
+                ['Law',  .91, 'color: #a2c4c9', '91%'],
+                ['Education Administration',  .94, 'color: #a2c4c9', '94%'],
+                ['Citywide Admin Services',  .97, 'color: #a2c4c9', '97%'],
+                ['Health & Mental Hygiene',  .98, 'color: #a2c4c9', '98%'],
+                ['Transportation',  .98, 'color: #a2c4c9', '98%'],
+                ['Children\'s Services',  .98, 'color: #a2c4c9', '98%'],
+                ['Manhattan Community College',  .99, 'color: #a2c4c9', '99%'],
+                ['Parks & Recreation',  1.02, 'color: #a2c4c9', '102%'],
+                ['Corrections',  1.02, 'color: #a2c4c9', '102%'],
+                ['Homeless Services',  1.05, 'color: #a2c4c9', '105%']
+        ]);
+        
+      
+     
+        	var options={ 
+                  width:800, height:1000,
+                  vAxis: {format:'#%'},
+                  hAxis: {format:'#%', ticks: [1], minValue: .6},
+                  colors: ['#a2c4c9'],
+                  fontSize: [ 12 ],
+                  chartArea: {left:220,top:5,width:"50%"},
+                  tooltip: {trigger:'none'},
+        		};
+
+
+    
+        // Create and draw the visualization.
+        var chart= new google.visualization.BarChart(document.getElementById('visualization'));chart.draw(data, options);
+
+      }
+      
+
+
+      google.setOnLoadCallback(drawVisualization);
+
+    </script>
+
+	<style>
+		
+		h1 {
+			font: 30px sans-serif;
+			#333333;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		h2 {
+			font: 20px sans-serif;
+			#333333;
+			text-align: center;
+
+		}
+
+		body {
+			font: 13px sans-serif;
+			#333333;
+			background: #e0e2e2;
+		}
+
+		table {
+			font: 14px sans-serif;
+			#333333;
+			background: #e0e2e2;
+		}
+
+		.post {
+			background: #FFFFFF;
+			width: 900px;
+			padding: 30px;
+			margin: 0 auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+
+		#visualization {
+			background: #FFFFFF;
+			width: 800px;
+			padding: 30px;
+			margin: 0 auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 12px;
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+
+	<h1>For NYC Public Employees, A Woman makes $.90 to a Man's Dollar</h1>
+	<h2>Here's a breakdown of women's salaries as a percentage of men's for the top 20 biggest city departments</h2>
+	
+<div class="post">
+	In 2013, for active salaried full-time workers, women made on average 90% of what men made, which nearly matches the 11% pay gap in the federal government, and is significantly better than the <a href="http://www.theguardian.com/world/2014/apr/08/equal-pay-women-senate-as-study-gender-gap" target="_blank">nationally average pay gap of 23%</a>. Check out the chart below: in some departments, like Corrections and Homeless Services, women actually make more on average than men.
+	<br><br>
+	<i><font size="1" color="#898888"> – LILAH RAPTOPOULOS</font></i>
+
+	    <div id="visualization"></div>
+
+</div>
+
+
+</body>
+</html>
