@@ -2,19 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>
-      Gender Pay Gap for New York City Employees
-    </title>
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../bootstrap-3.1.1-dist/css/jumbotron-narrow.css" rel="stylesheet">
+
+
+<title> 
+   Gender Pay Gap for New York City Employees
+</title>
 	
-  
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+
   <script type="text/javascript" src="//www.google.com/jsapi"></script>
+
     <script type="text/javascript">
      
       function drawcharts() {
         // Create and populate the data table.
         var data1 = google.visualization.arrayToDataTable([
-          ['Department', 'Women\'s Average Salary as a Percentage of Men\'s', { role: 'style' }, { role: 'annotation' }, {role: 'tooltip'}],
-                ['Total',  .9, 'color: #08b2c9', '90%', 'Overall Average Salary: $67,298' ],
+          ['Department', 'Women\'s Average Salary as a % of Men\'s', { role: 'style' }, { role: 'annotation' }, {role: 'tooltip'}],
+                ['Total',  .9, 'color: #08b2c9', '90%', 'Overall Average Salary: $65,365' ],
                 ['Fire',  .72, 'color: #a2c4c9', '72%', 'Overall Average Salary: $72,003'  ],
                 ['Police',  .74, 'color: #a2c4c9', '74%', 'Overall Average Salary: $67,109'  ],
                 ['Sanitation',  .81, 'color: #a2c4c9', '81%', 'Overall Average Salary: $67,238'  ],
@@ -38,46 +58,47 @@
         ]);
         
         	var options1 = { 
-                  width:800, height:1000,
+                  width:700, height:500,
                   vAxis: {format:'#%'},
-                  hAxis: {format:'#%', ticks: [1], minValue: .6},
+                  hAxis: {format:'#%', ticks: [1], minValue: .6, maxValue: 1.15},
                   colors: ['#a2c4c9'],
                   fontSize: [ 12 ],
-                  chartArea: {left:260,top:5,width:"50%"},
+                  legend: {position: 'right'},
+                  chartArea: {left:270,top:10,width:"40%",height:"100%",bottom:10},
         		};
 
  var data2 = google.visualization.arrayToDataTable([
-          ['Department', 'Women\'s Average Salary as a Percentage of Men\'s', { role: 'annotation' },  {role: 'tooltip'}],
+          ['Name of Position', 'Women\'s Average Salary as a % of Men\'s', { role: 'annotation' },  {role: 'tooltip'}],
                 ['Firefighter',  .94, '94%', 'Overall Average Salary: $74,259' ],
-                ['Administrative Staff Analyst',  .96, '96%', 'Average Salary: $93,288'],
-                ['Assistant Principal',  .99, '99%', 'Overall Average Salary: $107,514'],
-                ['Guidance Counselor',  .99, '99%', 'Overall Average Salary: $83,130'],
-                ['Principal',  .99, '99%', 'Overall Average Salary: $136,880'],
-                ['Caseworker',  .99, '99%', 'Overall Average Salary: $40,366'],
+                ['Administrative Staff Analyst',  .95, '95%', 'Average Salary: $93,288'],
                 ['Teacher - Special Education',  .99, '99%', 'Overall Average Salary: $70,653'],
+                ['Assistant Principal',  .99, '99%', 'Overall Average Salary: $107,514'],
                 ['Caretaker',  .99, '99%', 'Overall Average Salary: $35,978'],
-                ['Child Protective Specialist', 1, '100%', 'Overall Average Salary: $49,407'],
+                ['Guidance Counselor',  .99, '99%', 'Overall Average Salary: $83,130'],
                 ['Sanitation Worker',  1, '100%', 'Overall Average Salary: $64,315' ],
+                ['School Safety Agent',  1, '100%', 'Overall Average Salary: $34,889' ],
                 ['School Secretary',  1, '100%', 'Overall Average Salary: $53,639'],
                 ['Eligibility Specialist',  1, '100%', 'Overall Average Salary: $36,266'],
-                ['Community Associate',  1.01, '101%', 'Overall Average Salary: $41,022'],
                 ['Teacher',  1.01, '101%', 'Overall Average Salary: $75,684' ],
-                ['Principal Administrative Associate',  1.02, '102%', 'Overall Average Salary: $51,946' ],
-                ['Clerical Associate - Mayoral Attorney General',  1.02, '102%', 'Overall Average Salary: $37,954' ],
-                ['Lieutenant',  1.02, '102%', 'Overall Average Salary: $101,168'],
+                ['Principal Administrative Associate',  1.01, '101%', 'Overall Average Salary: $51,946' ],
+                ['Sergeant',  1.01, '101%', 'Overall Average Salary: $91,508'],
+                ['Community Associate',  1.01, '101%', 'Overall Average Salary: $41,022'],
                 ['Correction Officer',  1.02, '102%', 'Overall Average Salary: $66,783' ],
+                ['Clerical Associate - Mayoral Attorney General',  1.02, '102%', 'Overall Average Salary: $37,954' ],
                 ['Education Paraprofessional',  1.03, '103%', 'Overall Average Salary: $30,667' ],
+                ['Police Officer',  1.04, '104%', 'Overall Average Salary: $66,402' ],
                 ['Emergency Medical Specialist (EMT)',  1.04, '104%', 'Overall Average Salary: $40,665'],
+                ['Lieutenant',  1.06, '106%', 'Overall Average Salary: $101,168'],
              
         ]);
         
         	var options2 = { 
-                  width:800, height:1000,
+                  width:700, height:500,
                   vAxis: {format:'#%'},
-                  hAxis: {format:'#%', ticks: [1], minValue: .6},
+                  hAxis: {format:'#%', ticks: [1], minValue: .6, maxValue: 1.15},
                   colors: ['#a2c4c9'],
                   fontSize: [ 12 ],
-                  chartArea: {left:260,top:5,width:"50%"},
+                  chartArea: {left:270,top:5,width:"40%",height:"100%"},
         		};
 
     
@@ -96,47 +117,21 @@
     </script>
 
 	<style>
-		
-		h1 {
-			font: 30px sans-serif;
-			#333333;
-			margin-bottom: 10px;
-			margin-top: 10px;
-			text-align: center;
-		}
-
-		h2 {
-			font: 20px sans-serif;
-			#333333;
-			text-align: center;
-
-		}
-
-		body {
-			font: 13px sans-serif;
-			#333333;
-			background: #e0e2e2;
-		}
-
-		table {
-			font: 14px sans-serif;
-			#333333;
-			background: #e0e2e2;
-		}
 
 		.post {
 			background: #FFFFFF;
-			width: 900px;
-			padding: 30px;
+			width: 700px;
+			padding: 50px;
 			margin: 0 auto;
 			margin-top: 20px;
 			margin-bottom: 20px;
+
 		}
 
 
 		#visualization {
 			background: #FFFFFF;
-			width: 800px;
+			width: 700px;
 			padding: 30px;
 			margin: 0 auto;
 			margin-top: 20px;
@@ -152,26 +147,80 @@
 
 <body>
 
-	<h1>For NYC Public Employees, the Gender Paygap is Much Smaller Than You'd Think</h1>
-	<h2>On average in total, women make $.90 to men's dollar</h2>
-	
-<div class="post">
-	In 2013, for salaried full-time New York City public employees, women made on average 10% less than men overall. This nearly matches the 11% pay gap in the federal government, and is significantly better than the <a href="http://www.theguardian.com/world/2014/apr/08/equal-pay-women-senate-as-study-gender-gap" target="_blank">national average pay gap of 23%</a>. Check out the chart below: in some departments, like Corrections and Homeless Services, women actually make more on average than men.
-	<br><br>
-	<i><font size="1" color="#898888"> – LILAH RAPTOPOULOS</font></i>
+  <div class="container">
+      <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="http://www.lilahrap.github.io/final-project/index.html">Home</a></li>
+        <li><a href="http://www.lilahrap.com">Contact</a></li>
+      </ul>
+        <h3 class="text-muted">NYU - Data Journalism</h3>
+      </div>
 
-	<br />
+<div class="jumbotron">
 
-<h2>Gender pay gap for New York's top 20 biggest city departments</h2>
-	    <div id="chart_div"></div>
+	<h1>Does Wage Transparency Make for a Smaller Pay Gap?</h1>
+	 <p class="lead">Looks like it. For NYC public employees, the gender pay gap is smaller than you'd think: the average woman earns 90¢ to a man's dollar</p>
+   <img src="http://upload.wikimedia.org/wikipedia/commons/3/32/American_Association_of_University_Women_members_with_President_John_F._Kennedy_as_he_signs_the_Equal_Pay_Act_into_law.jpg" alt="American Association of University Women members with President John F. Kennedy as he signs the Equal Pay Act into law">
 
-<h2>Gender pay gap for New York's 20 most staffed positions</h2>
-	    <div id="chart_divs"></div>
+</div>
 
+<div class="row marketing">
+
+  <p>On April 8, President Obama rallied for the cause of the gender pay gap in the United States by calling on Congress to pass the Paycheck Fairness Act, which it <a href="http://www.nytimes.com/2014/04/10/us/politics/senate-republicans-block-bill-on-equal-pay.html" target="_blank">promptly blocked</a>. The Paycheck Fairness Act had two simple parts, meant to increase transparency: it gave employees of any company the legal right to discuss their salaries publicly, and it required the Equal Employment Opportunity Commission to collect salary information from employers. President Obama cited a much <a href="http://www.politifact.com/truth-o-meter/statements/2014/jan/29/barack-obama/barack-obama-state-union-says-women-make-77-cents-/" target="_blank">criticized statistic</a>: that women on average earn 77 cents for every dollar men earn. This is true on average for all full-time annual workers, but it does not compare men and women's wages for equivalent jobs. Republicans voted against the bill using the argument that this pay gap is smaller than Democrats choose to believe, and women are making less because they're choosing lower paying jobs.</p>
+
+  <p><a href="http://www.nytimes.com/2014/04/24/upshot/the-pay-gap-is-because-of-gender-not-jobs.html?_r=0" target="_blank">The Upshot found</a> that this paygap does  also exist on an apples-to-apples basis nation-wide, especially in high paying jobs. Here, I have taken a look at whether the transparency this Act was seeking actually does improve the gender wage gap, using New York City public employees as a sample.</p>
+
+  <p>New York State publishes the names, positions, salaries and/or total earninges for every individual that it has employed, holding itself accountable publicly for its wage decisions. Using this data, I calculated the pay gap between women and men in New York City. It turns out that in 2013, women earned on average 90% of what men did, a pay gap that is already 13% better than the national average. Ultimately, it turns out that transparency is a good thing, and New York City isn't doing so bad a job.</p>
+
+  <p>Now let's break it down by department and position:</p>
+
+	<br >
+  <br >
+
+<h4>Gender pay gap for New York's top 20 biggest city departments, by department</h4>
+	    
+      <br >
+    <div id="chart_div"></div>
+  
+  <br > 
+  <br >
+
+  <p><b>Women take home the bacon.</b> In a few departments, we've got women taking home a higher average salary than men!</p>
+
+  <p><b>In some places, it's still a man's world.</b> Why is the pay gap so large in the Fire, Police and Sanitation Departments? Because the department is 92% male. There are a number of high-paying leadership positions in the Fire Department held exclusively by men - including Deputy Chiefs (54 of them, making over $162k per year each), Supervisors of Mechanics (26 of them, making $102k per year), and Assistant Chiefs of Department (12 of them, making nearly $200k). Sanitation and Police are in the same boat, with a 92% male and 76% male work force, respectively.</p>
+
+  <p>Now let's look at the pay gap on as apples-to-apples a basis as we can: by position.</p>
+
+<br >
+<br >
+
+<h4>Gender pay gap for New York's 20 most staffed positions, by position name</h4>
+	      <br >
+    <div id="chart_divs"></div>
+
+<br >
+<br >
+
+<p><b>Gendered occupations are no lie. </b>Of all firefighters, 60 are women and 7,180 are men. That's 1%. Of all school secretaries, 2,500 are women and 28 are men. That's 12%.</p>
+
+<p><b>If you're a woman, don't be a sub.</b>The gender gap for substitute teachers is massive - women make an average of 65¢ to a man's dollar (or an average of just under $54k, while men make over $82k). Another group to keep an eye on are the Research Projects Coordinators in the Mayor's Office. Women face a wage gap of 81¢ on the dollar, or just under $65k while men make just over $80k. Keep in mind, this is low in relation to the NYC Employees data, but is still a better wage gap than the national average.</p>
+
+<p><b>If you're a woman, do be a prison baker.</b>Of the four Senior Bakers in the Department of Corrections, one is a woman. She takes home $1.17 for every dollar her male counterparts do.</p>
+
+
+<br >
+<br >
+
+<p><i>Note: All calculations were made using full time active salaried NYC employees. Source: <a href="http://seethroughny.net/" target="_blank">SeeThroughNY.</a></i></p>
+
+<p><i><font size="1" color="#898888"> MADE BY LILAH RAPTOPOULOS</font></i></p>
 
 
 </div>
 
+<div class="footer">
+        <p>&copy; Lilah Raptopoulos 2014</p>
+      </div>
 
 </body>
 </html>
