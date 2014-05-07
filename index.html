@@ -9,61 +9,97 @@
   
   <script type="text/javascript" src="//www.google.com/jsapi"></script>
     <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['corechart']});
-    </script>
-    <script type="text/javascript">
-      function drawVisualization() {
+     
+      function drawcharts() {
         // Create and populate the data table.
-        var data = google.visualization.arrayToDataTable([
-          ['Department', 'Cents on the Dollar'],
-                ['Fire',  72],
-                ['Police',  74],
-                ['Sanitation',  81],
-                ['Finance',  82],
-                ['Design & Construction',  86],
-                ['Housing Preservation & Development',  87],
-                ['Social Services',  89],
-                ['Environmental Protection',  90],
-                ['District Attorney',  90],
-                ['Housing Authority',  90],
-                ['Law',  91],
-                ['Education Administration',  94],
-                ['Citywide Admin Services',  97],
-                ['Health & Mental Hygiene',  98],
-                ['Transportation',  98],
-                ['Children\'s Services',  98],
-                ['Manhattan Community College',  99],
-                ['Parks & Recreation',  102],
-                ['Corrections',  102],
-                ['Homeless Services',  105],
-                ['Total',  90]
+        var data1 = google.visualization.arrayToDataTable([
+          ['Department', 'Women\'s Average Salary as a Percentage of Men\'s', { role: 'style' }, { role: 'annotation' }, {role: 'tooltip'}],
+                ['Total',  .9, 'color: #08b2c9', '90%', 'Overall Average Salary: $67,298' ],
+                ['Fire',  .72, 'color: #a2c4c9', '72%', 'Overall Average Salary: $72,003'  ],
+                ['Police',  .74, 'color: #a2c4c9', '74%', 'Overall Average Salary: $67,109'  ],
+                ['Sanitation',  .81, 'color: #a2c4c9', '81%', 'Overall Average Salary: $67,238'  ],
+                ['Finance',  .82, 'color: #a2c4c9', '82%', 'Overall Average Salary: $66,978'  ],
+                ['Design & Construction',  .86, 'color: #a2c4c9', '86%', 'Overall Average Salary: $73,125'  ],
+                ['Housing Preservation & Development',  .87, 'color: #a2c4c9', '87%', 'Overall Average Salary: $58,975'  ],
+                ['Social Services',  .89, 'color: #a2c4c9', '89%', 'Overall Average Salary: $48,333'  ],
+                ['Environmental Protection',  .9, 'color: #a2c4c9', '90%', 'Overall Average Salary: $63,942'  ],
+                ['District Attorney',  .9, 'color: #a2c4c9', '90%', 'Overall Average Salary: $68,233'  ],
+                ['Housing Authority',  .9, 'color: #a2c4c9', '90%', 'Overall Average Salary: $48,739' ],
+                ['Law',  .91, 'color: #a2c4c9', '91%', 'Overall Average Salary: $71,891' ],
+                ['Education Administration',  .94, 'color: #a2c4c9', '94%', 'Overall Average Salary: $67,576' ],
+                ['Citywide Admin Services',  .97, 'color: #a2c4c9', '97%', 'Overall Average Salary: $53,582' ],
+                ['Health & Mental Hygiene',  .98, 'color: #a2c4c9', '98%', 'Overall Average Salary: $62,854' ],
+                ['Transportation',  .98, 'color: #a2c4c9', '98%', 'Overall Average Salary: $60,229' ],
+                ['Children\'s Services',  .98, 'color: #a2c4c9', '98%', 'Overall Average Salary: $57,854' ],
+                ['Manhattan Community College',  .99, 'color: #a2c4c9', '99%', 'Overall Average Salary: $64,677' ],
+                ['Parks & Recreation',  1.02, 'color: #a2c4c9', '102%', 'Overall Average Salary: $54,074' ],
+                ['Corrections',  1.02, 'color: #a2c4c9', '102%', 'Overall Average Salary: $68,384' ],
+                ['Homeless Services',  1.05, 'color: #a2c4c9', '105%', 'Overall Average Salary: $54,199' ]
         ]);
         
-      
-        	var options={ 
+        	var options1 = { 
                   width:800, height:1000,
-                  vAxis: {},
-                  hAxis: {format:'#%', ticks: [100]},
+                  vAxis: {format:'#%'},
+                  hAxis: {format:'#%', ticks: [1], minValue: .6},
                   colors: ['#a2c4c9'],
                   fontSize: [ 12 ],
-                  chartArea: {left:220,top:5,width:"50%"}
+                  chartArea: {left:260,top:5,width:"50%"},
         		};
 
+ var data2 = google.visualization.arrayToDataTable([
+          ['Department', 'Women\'s Average Salary as a Percentage of Men\'s', { role: 'annotation' },  {role: 'tooltip'}],
+                ['Firefighter',  .94, '94%', 'Overall Average Salary: $74,259' ],
+                ['Administrative Staff Analyst',  .96, '96%', 'Average Salary: $93,288'],
+                ['Assistant Principal',  .99, '99%', 'Overall Average Salary: $107,514'],
+                ['Guidance Counselor',  .99, '99%', 'Overall Average Salary: $83,130'],
+                ['Principal',  .99, '99%', 'Overall Average Salary: $136,880'],
+                ['Caseworker',  .99, '99%', 'Overall Average Salary: $40,366'],
+                ['Teacher - Special Education',  .99, '99%', 'Overall Average Salary: $70,653'],
+                ['Caretaker',  .99, '99%', 'Overall Average Salary: $35,978'],
+                ['Child Protective Specialist', 1, '100%', 'Overall Average Salary: $49,407'],
+                ['Sanitation Worker',  1, '100%', 'Overall Average Salary: $64,315' ],
+                ['School Secretary',  1, '100%', 'Overall Average Salary: $53,639'],
+                ['Eligibility Specialist',  1, '100%', 'Overall Average Salary: $36,266'],
+                ['Community Associate',  1.01, '101%', 'Overall Average Salary: $41,022'],
+                ['Teacher',  1.01, '101%', 'Overall Average Salary: $75,684' ],
+                ['Principal Administrative Associate',  1.02, '102%', 'Overall Average Salary: $51,946' ],
+                ['Clerical Associate - Mayoral Attorney General',  1.02, '102%', 'Overall Average Salary: $37,954' ],
+                ['Lieutenant',  1.02, '102%', 'Overall Average Salary: $101,168'],
+                ['Correction Officer',  1.02, '102%', 'Overall Average Salary: $66,783' ],
+                ['Education Paraprofessional',  1.03, '103%', 'Overall Average Salary: $30,667' ],
+                ['Emergency Medical Specialist (EMT)',  1.04, '104%', 'Overall Average Salary: $40,665'],
+             
+        ]);
+        
+        	var options2 = { 
+                  width:800, height:1000,
+                  vAxis: {format:'#%'},
+                  hAxis: {format:'#%', ticks: [1], minValue: .6},
+                  colors: ['#a2c4c9'],
+                  fontSize: [ 12 ],
+                  chartArea: {left:260,top:5,width:"50%"},
+        		};
 
     
         // Create and draw the visualization.
-        var chart= new google.visualization.BarChart(document.getElementById('visualization'));chart.draw(data, options);
+        var chartA= new google.visualization.BarChart(document.getElementById('chart_div'));chartA.draw(data1, options1);
+
+        var chartB= new google.visualization.BarChart(document.getElementById('chart_divs'));chartB.draw(data2, options2);
+
       }
       
 
-      google.setOnLoadCallback(drawVisualization);
+
+      google.setOnLoadCallback(drawcharts);
+       google.load('visualization', '1', {packages: ['corechart']});
+
     </script>
 
 	<style>
 		
 		h1 {
 			font: 30px sans-serif;
-			color: #333333;
+			#333333;
 			margin-bottom: 10px;
 			margin-top: 10px;
 			text-align: center;
@@ -71,20 +107,20 @@
 
 		h2 {
 			font: 20px sans-serif;
-			color: #333333;
+			#333333;
 			text-align: center;
 
 		}
 
 		body {
 			font: 13px sans-serif;
-			color: #333333;
+			#333333;
 			background: #e0e2e2;
 		}
 
 		table {
 			font: 14px sans-serif;
-			color: #333333;
+			#333333;
 			background: #e0e2e2;
 		}
 
@@ -108,28 +144,32 @@
 			font-size: 12px;
 		}
 
+
+
 	</style>
 
 </head>
 
-
 <body>
 
-	<h1>For NYC Public Employees, A Woman makes $.90 to a Man's Dollar</h1>
-	<h2>Here's a breakdown of women's salaries as a percentage of men's for the top 20 biggest city departments</h2>
+	<h1>For NYC Public Employees, the Gender Paygap is Much Smaller Than You'd Think</h1>
+	<h2>On average in total, women make $.90 to men's dollar</h2>
 	
 <div class="post">
-	In 2013, for active salaried full-time workers, women made on average 90% that men did, which nearly matches the 11% pay gap in the federal government, and improves upon the <a href="http://www.theguardian.com/world/2014/apr/08/equal-pay-women-senate-as-study-gender-gap" target="_blank">nationally defined pay gap of 23%</a> (although this number is thought to be flawed). Check out the chart below: in some departments, like Corrections and Homeless Services, women actually make more on average than men.
+	In 2013, for salaried full-time New York City public employees, women made on average 10% less than men overall. This nearly matches the 11% pay gap in the federal government, and is significantly better than the <a href="http://www.theguardian.com/world/2014/apr/08/equal-pay-women-senate-as-study-gender-gap" target="_blank">national average pay gap of 23%</a>. Check out the chart below: in some departments, like Corrections and Homeless Services, women actually make more on average than men.
 	<br><br>
 	<i><font size="1" color="#898888"> – LILAH RAPTOPOULOS</font></i>
 
-	    <div id="visualization"></div>
+	<br />
 
-A few interesting points:
+<h2>Gender pay gap for New York's top 20 biggest city departments</h2>
+	    <div id="chart_div"></div>
 
-The Fire Department and Sanitation Departments have the smallest percentages of female employees. In both departments, only 8% of all employees in the department are female. 
+<h2>Gender pay gap for New York's 20 most staffed positions</h2>
+	    <div id="chart_divs"></div>
 
-Although transportation 
+
+
 </div>
 
 
